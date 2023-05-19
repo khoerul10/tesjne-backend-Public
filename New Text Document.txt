@@ -1,0 +1,4 @@
+ freedb_jneroot RTzqv4Vp#kwQpv!
+
+
+sql.freedb.tech 3306 freedb_jne_tes

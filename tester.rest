@@ -1,0 +1,104 @@
+# LOGIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "nik": "123",
+    "password": "123"
+}
+
+
+###
+
+# TAMBAH USER
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "contoh pegawai 2",
+    "nik": "21",
+    "password": "32123",
+    "confPassword": "32123",
+    "role": "pegawai"
+}
+
+###
+
+# LOGOUT
+DELETE http://localhost:5000/logout
+
+###
+
+# AMBIL SEMUA USER
+GET http://localhost:5000/users
+
+### 
+
+# AMBIL USER BERDASARKAN ID
+GET http://localhost:5000/users/a526785e-8dd2-4fb9-a5ed-811100c262fe
+
+###
+
+# UPDATE USER
+PATCH http://localhost:5000/users/6a219b99-27d6-4957-8fca-4a5692655227
+Content-Type: application/json
+
+{
+    "name": "paijo",
+    "nik": "32123",
+    "password": "",
+    "confPassword": "",
+    "role": "pegawai"
+}
+
+###
+
+# HAPUS USER
+DELETE http://localhost:5000/users/a526785e-8dd2-4fb9-a5ed-811100c262fe
+
+###
+
+# AMBIL DATA DIRI
+GET http://localhost:5000/me
+
+###
+
+# TAMBAH Absensi
+POST http://localhost:5000/absensi
+Content-Type: application/json
+
+{
+  "date": "2023-05-17",
+  "time": "22:02"
+}
+
+###
+
+# AMBIL SEMUA Absensi (berdasarkan yang login)
+GET http://localhost:5000/absensi
+
+###
+
+# AMBIL Absensi BERDASARKAN iD
+GET http://localhost:5000/absensi/51aa434e-e976-44b1-9ac5-536267242c4a
+
+###
+
+# UPDATE Absensi
+PATCH  http://localhost:5000/absensi/1b991cff-d2a0-4996-a02c-6aea25a516a6
+Content-Type: application/json
+
+{
+  "date": "2023-05-17",
+  "time": "19:01"
+}
+
+###
+
+# HAPUS USER
+DELETE http://localhost:5000/absensi/1b991cff-d2a0-4996-a02c-6aea25a516a6
+
+###
+
+# Cek yang belom absen
+GET http://localhost:5000/absensi-cek
